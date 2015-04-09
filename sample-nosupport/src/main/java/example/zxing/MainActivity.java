@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.zxing.integration.android.IntentIntegrator;
@@ -16,10 +18,18 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class MainActivity extends Activity {
 
+    ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mListView = (ListView) findViewById(R.id.listView);
+
+        String[] items = new String[] {"Item 1", "Item 2", "Item 3"};
+        ArrayAdapter<String> adapter =
+                new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+
+        mListView.setAdapter(adapter);
     }
 
     public void scanBarcode(View view) {

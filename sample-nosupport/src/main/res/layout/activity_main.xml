@@ -25,9 +25,14 @@
     <fragment
         android:tag="scan_fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="150dp"
 
         android:name="example.zxing.MainActivity$ScanFragment" tools:layout="@layout/fragment_scan" />
 
-
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_gravity="center_horizontal">
+    </ListView>
 </LinearLayout>

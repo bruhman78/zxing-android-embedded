@@ -19,12 +19,12 @@
 
   <SurfaceView android:id="@+id/zxing_preview_view"
                android:layout_width="fill_parent"
-               android:layout_height="fill_parent"/>
+               android:layout_height="150dp"/>
 
   <com.google.zxing.client.android.ViewfinderView
       android:id="@+id/zxing_viewfinder_view"
       android:layout_width="fill_parent"
-      android:layout_height="fill_parent"/>
+      android:layout_height="150dp"/>
 
   <LinearLayout android:id="@+id/zxing_result_view"
                 android:orientation="vertical"
